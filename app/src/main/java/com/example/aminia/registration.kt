@@ -20,7 +20,11 @@ class registration : AppCompatActivity() {
 
         val loginPage = findViewById<TextView>(R.id.loginText)
         val filenames = findViewById<EditText>(R.id.fullname)
-        val linenumber  = findViewById<EditText>(R.id.phonenumber )
+        val linenumber  = findViewById<EditText>(R.id.phonenumber)
+        val nationality  = findViewById<EditText>(R.id.nationalty)
+        val nationalId  = findViewById<EditText>(R.id.nationalId)
+        val bank  = findViewById<EditText>(R.id.bank)
+        val bankAccountNumber  = findViewById<EditText>(R.id.bankAccountNumber)
         val password = findViewById<EditText>(R.id.password)
         val conformists = findViewById<EditText>(R.id.cornfirmpassword)
         val registrationButton = findViewById<Button>(R.id.button)
@@ -29,9 +33,13 @@ class registration : AppCompatActivity() {
         registrationButton.setOnClickListener{
             val userFilenames = filenames.text
             val userLinenumber = linenumber.text
+            val userNationality= nationality.text
+            val userNationalId = nationalId.text
+            val userBank = bank.text
+            val userBankAccountNumber = bankAccountNumber.text
             val userPassword = password.text
             val userConfirmPassword = conformists.text
-            if(userFilenames.isBlank() || userLinenumber.isBlank() || userPassword.isBlank() || userConfirmPassword.isBlank()){
+            if(userFilenames.isBlank() || userLinenumber.isBlank() || userPassword.isBlank() || userConfirmPassword.isBlank() || userNationality.isBlank() || userNationalId.isBlank() || userBank.isBlank() || userBankAccountNumber.isBlank()){
                 builder.setTitle("REGISTRATION FAILED")
                 builder.setMessage("Please all fill the required field!!")
                 builder.setPositiveButton("Try Again",{ dialogInterface: DialogInterface, i: Int -> })
@@ -44,6 +52,10 @@ class registration : AppCompatActivity() {
                        val params = HashMap<String,String>()
                        params["filenames"] = userFilenames.toString()
                        params["linenumber"] = userLinenumber.toString()
+                       params["nationality"] = userNationality.toString()
+                       params["nationalId"] = userNationalId.toString()
+                       params["bank"] = userBank.toString()
+                       params["bankAccount"] = userBankAccountNumber.toString()
                        params["password"] = userPassword.toString()
                        params["conformists"] = userConfirmPassword.toString()
                        val jsonObject = JSONObject(params as Map<*, *>?)

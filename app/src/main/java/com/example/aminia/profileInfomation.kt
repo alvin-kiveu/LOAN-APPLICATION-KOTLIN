@@ -24,6 +24,10 @@ class profileInfomation : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         val loginFullNames = findViewById<TextView>(R.id.textView5)
         val loginUserPhoneNumber = findViewById<TextView>(R.id.textView6)
+        val loginNationality= findViewById<TextView>(R.id.textView8)
+        val loginNationalId = findViewById<TextView>(R.id.textView10)
+        val loginBank = findViewById<TextView>(R.id.textView12)
+        val loginBankAccount = findViewById<TextView>(R.id.textView14)
 
         val sharedPreferences: SharedPreferences = this.getSharedPreferences(sharedPrefFile,
             Context.MODE_PRIVATE)
@@ -41,8 +45,16 @@ class profileInfomation : AppCompatActivity() {
                 if (resultCode.toString() == "Success") {
                     val userName = stringResponse.getString("userFullName")
                     val userPhone = stringResponse.getString("userPhoneNumber")
+                    val userNationality = stringResponse.getString("nationalty")
+                    val userNationalId = stringResponse.getString("nationalId")
+                    val userBank = stringResponse.getString("bank")
+                    val userBankAccount = stringResponse.getString("bankaccount")
                     loginFullNames.setText(userName).toString()
                     loginUserPhoneNumber.setText(userPhone).toString()
+                    loginNationality.setText(userNationality).toString()
+                    loginNationalId.setText(userNationalId).toString()
+                    loginBank.setText(userBank).toString()
+                    loginBankAccount.setText(userBankAccount).toString()
                 }
             },
             { resError ->
