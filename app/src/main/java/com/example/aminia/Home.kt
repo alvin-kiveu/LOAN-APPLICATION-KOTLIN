@@ -30,6 +30,10 @@ private lateinit var binding: ActivityHomeBinding
             startActivity(intent)
             finish()
         }
+
+
+
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_home)
