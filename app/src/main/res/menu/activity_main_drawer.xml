@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_loanApply"
+            android:icon="@drawable/ic_baseline_app_registration_24"
+            android:title="Apply Loan" />
+        <item
+            android:id="@+id/nav_loanStatus"
+            android:icon="@drawable/ic_baseline_content_paste_24"
+            android:title="Loan Status" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_baseline_perm_identity_24"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:title="Logout" />
+    </group>
+</menu>

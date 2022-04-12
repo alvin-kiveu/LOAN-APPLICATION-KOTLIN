@@ -12,9 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Aminia">
         <activity
-            android:name=".profileInfomation"
+            android:name=".Home"
+            android:exported="false"
+            android:label="@string/title_activity_home"
             android:screenOrientation="portrait"
-            android:exported="false" />
+            android:theme="@style/Theme.Aminia.NoActionBar" />
         <activity
             android:name=".registration"
             android:exported="false"

@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
                             builder.setMessage("You have login successfully")
                             builder.setPositiveButton("Okay") { dialogInterface: DialogInterface, i: Int -> }
                             builder.show()
-                            val intent = Intent(this, profileInfomation::class.java)
+                            val intent = Intent(this, Home::class.java)
                             startActivity(intent)
                             finish()
                         } else {
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }else{
-            val intent = Intent(this, profileInfomation::class.java)
+            val intent = Intent(this, Home::class.java)
             startActivity(intent)
             finish()
         }

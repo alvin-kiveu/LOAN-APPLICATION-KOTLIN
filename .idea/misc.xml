@@ -8,10 +8,25 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/drawable/profileback.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/drawable/rippo.xml" value="0.1" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/drawable/splashscreenbackground.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/activity_profile_infomation.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/activity_registration.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/app_bar_home.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/content_home.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_gallery.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_loanapply.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_loanstatus.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_slideshow.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragmentloanstetus.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/nav_header_home.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/menu/activity_main_drawer.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/menu/home.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.21614583333333334" />
       </map>
     </option>
   </component>

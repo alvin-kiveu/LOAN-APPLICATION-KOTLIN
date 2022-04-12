@@ -18,7 +18,7 @@ class profileInfomation : AppCompatActivity() {
     private val sharedPrefFile = "aminia"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile_infomation)
+        setContentView(R.layout.fragment_profile)
 
         val logout = findViewById<Button>(R.id.logoutbutton)
         val builder = AlertDialog.Builder(this)
@@ -28,6 +28,7 @@ class profileInfomation : AppCompatActivity() {
         val loginNationalId = findViewById<TextView>(R.id.textView10)
         val loginBank = findViewById<TextView>(R.id.textView12)
         val loginBankAccount = findViewById<TextView>(R.id.textView14)
+
 
         val sharedPreferences: SharedPreferences = this.getSharedPreferences(sharedPrefFile,
             Context.MODE_PRIVATE)
@@ -64,6 +65,7 @@ class profileInfomation : AppCompatActivity() {
             }
         )
         queue.add(request)
+
 
 
         logout.setOnClickListener{
