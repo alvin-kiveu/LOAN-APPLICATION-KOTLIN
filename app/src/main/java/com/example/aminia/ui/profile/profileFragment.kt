@@ -29,7 +29,7 @@ class profileFragment : Fragment(){
 
         val root: View =  inflater.inflate(R.layout.fragment_profile, container, false)
 
-        val logout = root.findViewById<Button>(R.id.logoutbutton)
+
         val builder = context?.let { AlertDialog.Builder(it) }
         val loginFullNames = root.findViewById<TextView>(R.id.textView5)
         val loginUserPhoneNumber = root.findViewById<TextView>(R.id.textView6)
@@ -81,23 +81,6 @@ class profileFragment : Fragment(){
             queue.add(request)
         }
 
-        logout.setOnClickListener{
-            val editor = sharedPreferences?.edit()
-            if (editor != null) {
-                editor.clear()
-                editor.apply()
-            }
-            loginUserPhoneNumber.setText("").toString()
-            if (builder != null) {
-                builder.setTitle("LOG OUT SUCCESS")
-                builder.setMessage("You have log out successfully")
-                builder.setPositiveButton("Okay") { dialogInterface: DialogInterface, i: Int -> }
-                builder.show()
-            }
-            val intent = Intent(activity, MainActivity::class.java)
-            startActivity(intent)
-
-        }
 
         return root
     }

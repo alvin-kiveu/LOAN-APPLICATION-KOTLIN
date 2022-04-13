@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/drawable/button.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/drawable/button_normal.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/drawable/button_pressed.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/drawable/inputholder.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/drawable/inputs.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/drawable/pressed_button.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/drawable/profileback.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/drawable/rippo.xml" value="0.1" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/drawable/splashscreenbackground.xml" value="0.21614583333333334" />
@@ -13,13 +17,13 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/activity_profile_infomation.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/activity_registration.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/app_bar_home.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/app_bar_home.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/content_home.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_gallery.xml" value="0.2" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_loanapply.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_loanstatus.xml" value="0.2" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragment_slideshow.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/fragmentloanstetus.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Aminia/app/src/main/res/layout/nav_header_home.xml" value="0.2" />

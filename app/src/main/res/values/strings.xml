@@ -12,5 +12,4 @@
     <string name="menu_loanApply">Apply Loan</string>
     <string name="menu_loanStatus">Loan Status</string>
     <string name="menu_profile">Profile</string>
-    <string name="menu_logout">Logout</string>
 </resources>
