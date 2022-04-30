@@ -11,8 +11,8 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="379dp"
-        android:layout_height="147dp"
+        android:layout_width="351dp"
+        android:layout_height="153dp"
         android:background="@drawable/profileback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,15 +27,15 @@
         android:layout_height="43dp"
         android:text="TOTAL LOAN BALANCE"
         android:textAlignment="center"
-        android:textColor="#2B682D"
+        android:textColor="#216124"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintHorizontal_bias="0.691"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.163"
+        app:layout_constraintVertical_bias="0.172"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -45,7 +45,7 @@
         android:text="Ksh 10000"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
@@ -57,10 +57,11 @@
 
     <Button
         android:id="@+id/loanApply"
-        android:layout_width="250dp"
-        android:layout_height="57dp"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
         android:background="@drawable/button"
         android:text="Apply Loan"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.565"
@@ -70,18 +71,20 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="408dp"
-        android:layout_height="34dp"
-        android:background="@color/purple_500"
+        android:layout_width="360dp"
+        android:layout_height="37dp"
+        android:background="@drawable/button"
         android:text="AMINA FARM LOAN APPLICATION"
         android:textAlignment="center"
-        android:textColor="@color/purple_200"
-        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.652"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
