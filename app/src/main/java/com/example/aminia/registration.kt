@@ -82,7 +82,7 @@ class registration : AppCompatActivity() {
                            },
                            { resError ->
                                // handle error
-                               builder.setMessage("Error failed")
+                               builder.setMessage("Network Error failed. Check your internet connection")
                                builder.show()
                            }
                        )

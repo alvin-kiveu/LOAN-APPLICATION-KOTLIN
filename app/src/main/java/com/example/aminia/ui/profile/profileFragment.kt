@@ -1,21 +1,17 @@
 package com.example.aminia.ui.profile
 
 import android.content.Context
-import android.content.DialogInterface
-import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.example.aminia.MainActivity
 import com.example.aminia.R
 import org.json.JSONObject
 
@@ -71,7 +67,7 @@ class profileFragment : Fragment(){
             { resError ->
                 // handle error
                 if (builder != null) {
-                    builder.setMessage("Error failed")
+                    builder.setMessage("Network Error failed. Check your internet connection")
                     builder.show()
                 }
 

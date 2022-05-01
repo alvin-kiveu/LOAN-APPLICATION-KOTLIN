@@ -33,7 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
-
+ , 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="301dp"
