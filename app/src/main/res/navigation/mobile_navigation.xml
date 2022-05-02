@@ -25,6 +25,12 @@
         tools:layout="@layout/fragment_loanapply" />
 
     <fragment
+        android:id="@+id/nav_loanReplay"
+        android:name="com.example.aminia.ui.loanReplay.loanReplayFragment"
+        android:label="Repay Loan"
+        tools:layout="@layout/fragment_loanapply" />
+
+    <fragment
         android:id="@+id/nav_profile"
         android:name="com.example.aminia.ui.profile.profileFragment"
         android:label="Profile"

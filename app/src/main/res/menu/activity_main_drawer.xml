@@ -18,6 +18,10 @@
             android:icon="@drawable/ic_baseline_content_paste_24"
             android:title="Loan Status" />
         <item
+            android:id="@+id/nav_loanReplay"
+            android:icon="@drawable/ic_baseline_repeat_one_24"
+            android:title="Repay Loan" />
+        <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_baseline_perm_identity_24"
             android:title="Profile" />
