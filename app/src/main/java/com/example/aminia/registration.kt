@@ -4,9 +4,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
@@ -23,23 +21,36 @@ class registration : AppCompatActivity() {
         val linenumber  = findViewById<EditText>(R.id.phonenumber)
         val nationality  = findViewById<EditText>(R.id.nationalty)
         val nationalId  = findViewById<EditText>(R.id.nationalId)
-        val bank  = findViewById<EditText>(R.id.bank)
+
         val bankAccountNumber  = findViewById<EditText>(R.id.bankAccountNumber)
         val password = findViewById<EditText>(R.id.password)
         val conformists = findViewById<EditText>(R.id.cornfirmpassword)
         val registrationButton = findViewById<Button>(R.id.button)
         val builder = AlertDialog.Builder(this)
+        val bank  = findViewById<Spinner>(R.id.bank)
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.banks,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            // Specify the layout to use when the list of choices appears
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            // Apply the adapter to the spinner
+            bank.adapter = adapter
+        }
 
         registrationButton.setOnClickListener{
+
+            val bankSelected : String = bank.getSelectedItem().toString()
             val userFilenames = filenames.text
             val userLinenumber = linenumber.text
             val userNationality= nationality.text
             val userNationalId = nationalId.text
-            val userBank = bank.text
+            val userBank = bankSelected
             val userBankAccountNumber = bankAccountNumber.text
             val userPassword = password.text
             val userConfirmPassword = conformists.text
-            if(userFilenames.isBlank() || userLinenumber.isBlank() || userPassword.isBlank() || userConfirmPassword.isBlank() || userNationality.isBlank() || userNationalId.isBlank() || userBank.isBlank() || userBankAccountNumber.isBlank()){
+            if(userFilenames.isBlank() || userLinenumber.isBlank() || userPassword.isBlank() || userConfirmPassword.isBlank() || userNationality.isBlank() || userNationalId.isBlank() || userBankAccountNumber.isBlank()){
                 builder.setTitle("REGISTRATION FAILED")
                 builder.setMessage("Please all fill the required field!!")
                 builder.setPositiveButton("Try Again",{ dialogInterface: DialogInterface, i: Int -> })
@@ -54,7 +65,7 @@ class registration : AppCompatActivity() {
                        params["linenumber"] = userLinenumber.toString()
                        params["nationality"] = userNationality.toString()
                        params["nationalId"] = userNationalId.toString()
-                       params["bank"] = userBank.toString()
+                       params["bank"] = userBank
                        params["bankAccount"] = userBankAccountNumber.toString()
                        params["password"] = userPassword.toString()
                        params["conformists"] = userConfirmPassword.toString()

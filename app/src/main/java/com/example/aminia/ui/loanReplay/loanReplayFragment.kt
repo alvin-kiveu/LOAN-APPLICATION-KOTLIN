@@ -57,7 +57,7 @@ class loanReplayFragment : Fragment(){
                             amountRepay.setText("")
                             if (builder != null) {
                                 builder.setTitle("LOAN REPAY")
-                                builder.setMessage("SUCCESSFULLY REPLAYED")
+                                builder.setMessage("SUCCESSFULLY REPAID")
                                 builder.setPositiveButton("Okay") { dialogInterface: DialogInterface, i: Int -> }
                                 builder.show()
                             }

@@ -55,7 +55,7 @@
             app:layout_constraintVertical_bias="1.0"
             tools:ignore="MissingConstraints,NotSibling,UnknownId" />
 
-        <EditText
+        <Spinner
             android:id="@+id/periodOfFarming"
             android:layout_width="334dp"
             android:layout_height="60dp"
@@ -81,7 +81,7 @@
             tools:ignore="MissingConstraints,UnknownId" />
 
 
-        <EditText
+        <Spinner
             android:id="@+id/scaleOfFarming"
             android:layout_width="334dp"
             android:layout_height="60dp"
@@ -92,71 +92,86 @@
             android:background="@drawable/inputs"
             android:drawableStart="@drawable/ic_baseline_escalator_24"
             android:ems="10"
-            android:hint="Scale Of Farming"
-            android:inputType="text"
+
             android:padding="10dp"
             android:textColor="#000000"
             android:textColorHint="#0E0E0E"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/product"
+            app:layout_constraintBottom_toTopOf="@+id/P1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product"
+            app:layout_constraintTop_toBottomOf="@+id/P1"
             app:layout_constraintVertical_bias="1.0"
             tools:ignore="MissingConstraints,UnknownId" />
 
-        <EditText
-            android:id="@+id/product"
-            android:layout_width="334dp"
-            android:layout_height="60dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/inputs"
-            android:drawableStart="@drawable/ic_baseline_airline_stops_24"
-            android:ems="10"
-            android:hint="Agricultural Product"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textColor="#000000"
-            android:textColorHint="#0E0E0E"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/amount"
+        <CheckBox
+            android:id="@+id/P1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 kg Fertilizer"
+            app:layout_constraintBottom_toTopOf="@+id/P2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintHorizontal_bias="0.163"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/amount"
+            app:layout_constraintTop_toBottomOf="@+id/P2"
             app:layout_constraintVertical_bias="1.0"
             tools:ignore="MissingConstraints,UnknownId" />
 
-        <EditText
-            android:id="@+id/amount"
-            android:layout_width="334dp"
-            android:layout_height="60dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/inputs"
-            android:drawableStart="@drawable/ic_baseline_money_24"
-            android:ems="10"
-            android:hint="Amount"
-            android:inputType="number"
-            android:padding="10dp"
-            android:textColor="#000000"
-            android:textColorHint="#0E0E0E"
-            android:textStyle="bold"
+        <CheckBox
+            android:id="@+id/P2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 kg Maize Seeds"
+            app:layout_constraintBottom_toTopOf="@+id/P3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/P3"
+            app:layout_constraintVertical_bias="0.812"
+            tools:ignore="MissingConstraints,UnknownId" />
+
+        <CheckBox
+            android:id="@+id/P3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 kg Beans Seeds"
+            app:layout_constraintBottom_toTopOf="@+id/P4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/P4"
+            app:layout_constraintVertical_bias="0.812"
+            tools:ignore="MissingConstraints,UnknownId" />
+
+
+        <CheckBox
+            android:id="@+id/P4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesticide 5g"
+            app:layout_constraintBottom_toTopOf="@+id/P5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.158"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/P5"
+            app:layout_constraintVertical_bias="0.947"
+            tools:ignore="MissingConstraints,UnknownId" />
+
+        <CheckBox
+            android:id="@+id/P5"
+            android:layout_width="164dp"
+            android:layout_height="38dp"
+            android:text="1 kg wheat seeds "
             app:layout_constraintBottom_toTopOf="@+id/paymentMethod"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintHorizontal_bias="0.194"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/paymentMethod"
             app:layout_constraintVertical_bias="1.0"
             tools:ignore="MissingConstraints,UnknownId" />
 
-        <EditText
+        <Spinner
             android:id="@+id/paymentMethod"
             android:layout_width="334dp"
             android:layout_height="60dp"
@@ -173,31 +188,6 @@
             android:textColor="#000000"
             android:textColorHint="#0E0E0E"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/paymentDuration"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/paymentDuration"
-            app:layout_constraintVertical_bias="1.0"
-            tools:ignore="MissingConstraints,UnknownId" />
-
-        <EditText
-            android:id="@+id/paymentDuration"
-            android:layout_width="334dp"
-            android:layout_height="60dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/inputs"
-            android:drawableStart="@drawable/ic_baseline_schedule_24"
-            android:ems="10"
-            android:hint="Payment Duration"
-            android:inputType="text"
-            android:padding="10dp"
-            android:textColor="#000000"
-            android:textColorHint="#0E0E0E"
-            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/actionTaken"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
@@ -205,6 +195,8 @@
             app:layout_constraintTop_toBottomOf="@+id/actionTaken"
             app:layout_constraintVertical_bias="1.0"
             tools:ignore="MissingConstraints,UnknownId" />
+
+
 
         <EditText
             android:id="@+id/actionTaken"

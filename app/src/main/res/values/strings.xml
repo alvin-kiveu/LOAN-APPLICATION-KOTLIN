@@ -14,4 +14,44 @@
     <string name="menu_profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="banks">
+        <item>KCB</item>
+        <item>Equity Bank</item>
+        <item>Co-operative Bank</item>
+    </string-array>
+
+
+    <string-array name="scale">
+        <item>Choose Scale of farming</item>
+        <item>Small Scale Farming</item>
+        <item>Large Scale farming</item>
+    </string-array>
+
+    <string-array name="paymentMethod">
+        <item>Choose Method Of payment</item>
+        <item>M-pesa</item>
+        <item>Bank</item>
+    </string-array>
+
+    <string-array name="periodOfFarming">
+        <item>Choose Period Of Farming</item>
+        <item>1 Month</item>
+        <item>2 Month</item>
+        <item>3 Month</item>
+        <item>4 Month</item>
+        <item>5 Month</item>
+        <item>6 Month</item>
+        <item>7 Month</item>
+        <item>8 Month</item>
+        <item>9 Month</item>
+        <item>10 Month</item>
+        <item>11 Month</item>
+        <item>1 year</item>
+        <item>1 1/2 year</item>
+        <item>2 year</item>
+        <item>2 1/2 year</item>
+        <item>3 year</item>
+        <item>3 1/2 year</item>
+    </string-array>
 </resources>

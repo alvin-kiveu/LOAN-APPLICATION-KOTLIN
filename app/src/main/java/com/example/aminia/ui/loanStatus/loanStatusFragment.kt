@@ -43,6 +43,7 @@ class loanStatusFragment : Fragment(){
         val textView14 = root.findViewById<TextView>(R.id.textView14)
         val textView15 = root.findViewById<TextView>(R.id.textView15)
         val textView16 = root.findViewById<TextView>(R.id.textView16)
+        val textView19 = root.findViewById<TextView>(R.id.textView19)
 
         val sharedPreferences: SharedPreferences? =
             this.getActivity()?.getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
@@ -64,19 +65,18 @@ class loanStatusFragment : Fragment(){
                     val periodOfFarming = stringResponse.getString("periodOfFarming")
                     val scaleOfFarming = stringResponse.getString("scaleOfFarming")
                     val product = stringResponse.getString("product")
-                    //val amount = stringResponse.getString("amount")
+                    val amount = stringResponse.getString("amount")
                     val paymentMethod = stringResponse.getString("paymentMethod")
                     val repaid = stringResponse.getString("repaid")
-                    val remainBalance = stringResponse.getString("remainBalance")
+                   val remainBalance = stringResponse.getString("remainBalance")
                     textView5.setText(typeOfFarming).toString()
                     textView6.setText(periodOfFarming).toString()
-                    textView8.setText(scaleOfFarming).toString()
-                    textView10.setText(product).toString()
-                    //textView18.setText(amount).toString()
+                   textView8.setText(scaleOfFarming).toString()
+                   textView10.setText(product).toString()
+                    textView19.setText(amount).toString()
                     textView18.setText(paymentMethod).toString()
                     textView14.setText(repaid).toString()
                     textView16.setText(remainBalance).toString()
-
                 }else{
                     if (resultCode.toString() == "NotActive") {
                         loanDataInfo.setVisibility(View.INVISIBLE)
@@ -96,6 +96,7 @@ class loanStatusFragment : Fragment(){
                         textView15.setVisibility(View.INVISIBLE)
                         textView16.setVisibility(View.INVISIBLE)
                         textView18.setVisibility(View.INVISIBLE)
+                        textView19.setVisibility(View.INVISIBLE)
                     }
                 }
             },

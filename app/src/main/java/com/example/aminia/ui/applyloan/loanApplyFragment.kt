@@ -7,8 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.android.volley.Request
@@ -26,27 +25,79 @@ class loanApplyFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        val builder = context?.let { AlertDialog.Builder(it) }
         val root: View =  inflater.inflate(R.layout.fragment_loanapply, container, false)
         val userLoanApply = root.findViewById<TextView>(R.id.text_applyApply)
         val typeOfFarming = root.findViewById<EditText>(R.id.typeOfFarming)
-        val periodOfFarming = root.findViewById<EditText>(R.id.periodOfFarming)
-        val scaleOfFarming = root.findViewById<EditText>(R.id.scaleOfFarming)
-        val product = root.findViewById<EditText>(R.id.product)
-        val amount = root.findViewById<EditText>(R.id.amount)
-        val paymentMethod = root.findViewById<EditText>(R.id.paymentMethod)
-        val paymentDuration = root.findViewById<EditText>(R.id.paymentDuration)
         val actionTaken = root.findViewById<EditText>(R.id.actionTaken)
+        val paymentDuration ="6 months"
+        val product = "farm Products"
 
-        val builder = context?.let { AlertDialog.Builder(it) }
+        val productOne = root.findViewById<CheckBox>(R.id.P1)
+        val productTwo = root.findViewById<CheckBox>(R.id.P2)
+        val productThree = root.findViewById<CheckBox>(R.id.P3)
+        val productFour = root.findViewById<CheckBox>(R.id.P4)
+        val productFive = root.findViewById<CheckBox>(R.id.P5)
+
+        val productPriceOne = 1500
+        val productPriceTwo = 2000
+        val productPriceThree = 4000
+        val productPriceFour = 2000
+        val productPriceFive = 1000
+
+
+
+        val scaleOfFarming = root.findViewById<Spinner>(R.id.scaleOfFarming)
+        ArrayAdapter.createFromResource(
+            requireActivity(),
+            R.array.scale,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            scaleOfFarming.adapter = adapter
+        }
+
+        val periodOfFarming = root.findViewById<Spinner>(R.id.periodOfFarming)
+
+        ArrayAdapter.createFromResource(
+            requireActivity(),
+            R.array.periodOfFarming,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            periodOfFarming.adapter = adapter
+        }
+
+        val paymentMethod = root.findViewById<Spinner>(R.id.paymentMethod)
+
+        ArrayAdapter.createFromResource(
+            requireActivity(),
+            R.array.paymentMethod,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            paymentMethod.adapter = adapter
+        }
+
+
         userLoanApply.setOnClickListener{
+            if(productOne.isChecked){
+                val amountTotal =  productPriceOne + productPriceTwo + productPriceThree + productPriceFour + productPriceFive
+            }
+
+            val amountTotal = 299
+            val amount = amountTotal
+
+            val scaleOfFarmingSelected : String = scaleOfFarming.getSelectedItem().toString()
+            val scalePeriodOfFarming: String = periodOfFarming.getSelectedItem().toString()
+            val scalePaymentMethod: String = paymentMethod.getSelectedItem().toString()
             val farmingType = typeOfFarming.text
-            val farmingPeriod = periodOfFarming.text
-            val farmingScale = scaleOfFarming.text
-            val farmProduct = product.text
-            val farmingAmount = amount.text
-            val methodOfPayment = paymentMethod.text
-            val durationOfPayment = paymentDuration.text
+            val farmingPeriod = scalePeriodOfFarming
+            val farmingScale = scaleOfFarmingSelected
+            val farmProduct = product
+            val farmingAmount = amount
+            val methodOfPayment = scalePaymentMethod
+            val durationOfPayment = paymentDuration
             val takenAction = actionTaken.text
 
             val sharedPreferences: SharedPreferences? =
@@ -54,7 +105,7 @@ class loanApplyFragment : Fragment() {
 
             val sharedPhoneNumber = sharedPreferences?.getString("loginPhoneNumber","")
 
-            if(farmingType.isBlank() || farmingPeriod.isBlank() || farmingScale.isBlank() || farmProduct.isBlank() || farmingAmount.isBlank() || methodOfPayment.isBlank() || durationOfPayment.isBlank() || takenAction.isBlank()){
+            if(farmingType.isBlank() || farmProduct.isBlank() ||  durationOfPayment.isBlank() || takenAction.isBlank()){
                 if (builder != null) {
                     builder.setTitle("LOAN APPLICATION FAILED")
                     builder.setMessage("Please all fill the required field!!")
@@ -68,10 +119,10 @@ class loanApplyFragment : Fragment() {
                 params["linenumber"] = sharedPhoneNumber.toString()
                 params["typeOfFarming"] = farmingType.toString()
                 params["periodOfFarming"] = farmingPeriod.toString()
-                params["scaleOfFarming"] = farmingScale.toString()
+                params["scaleOfFarming"] = farmingScale
                 params["product"] = farmProduct.toString()
                 params["amount"] = farmingAmount.toString()
-                params["paymentMethod"] = methodOfPayment.toString()
+                params["paymentMethod"] = methodOfPayment
                 params["paymentDuration"] = durationOfPayment.toString()
                 params["actionTaken"] = takenAction.toString()
                 val jsonObject = JSONObject(params as Map<*, *>?)
@@ -81,12 +132,6 @@ class loanApplyFragment : Fragment() {
                         val resultCode = stringResponse.getString("ResultCode")
                         if (resultCode.toString() == "Success") {
                             typeOfFarming.setText("")
-                            periodOfFarming.setText("")
-                            scaleOfFarming.setText("")
-                            product.setText("")
-                            amount.setText("")
-                            paymentMethod.setText("")
-                            paymentDuration.setText("")
                             actionTaken.setText("")
                             if (builder != null) {
                                 builder.setTitle("LOAN APPLICATION")

@@ -12,8 +12,8 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="356dp"
-        android:layout_height="267dp"
+        android:layout_width="334dp"
+        android:layout_height="210dp"
         android:background="@drawable/profileback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +61,7 @@
         android:layout_width="360dp"
         android:layout_height="37dp"
         android:background="@drawable/button"
-        android:text="AMINA FARM LOAN APPLICATION"
+        android:text="AMINIA FARM LOAN APPLICATION"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"
