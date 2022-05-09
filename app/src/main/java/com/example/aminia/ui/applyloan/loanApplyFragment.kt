@@ -31,7 +31,7 @@ class loanApplyFragment : Fragment() {
         val typeOfFarming = root.findViewById<EditText>(R.id.typeOfFarming)
         val actionTaken = root.findViewById<EditText>(R.id.actionTaken)
         val paymentDuration ="6 months"
-        val product = "farm Products"
+
 
         val productOne = root.findViewById<CheckBox>(R.id.P1)
         val productTwo = root.findViewById<CheckBox>(R.id.P2)
@@ -39,12 +39,17 @@ class loanApplyFragment : Fragment() {
         val productFour = root.findViewById<CheckBox>(R.id.P4)
         val productFive = root.findViewById<CheckBox>(R.id.P5)
 
-        val productPriceOne = 1500
-        val productPriceTwo = 2000
-        val productPriceThree = 4000
-        val productPriceFour = 2000
-        val productPriceFive = 1000
+        var productPriceOne = 0
+        var productPriceTwo = 0
+        var productPriceThree = 0
+        var productPriceFour = 0
+        var productPriceFive = 0
 
+        var productNameOne = ""
+        var productNameTwo = ""
+        var productNameThree = ""
+        var productNameFour = ""
+        var productNameFive = ""
 
 
         val scaleOfFarming = root.findViewById<Spinner>(R.id.scaleOfFarming)
@@ -82,10 +87,33 @@ class loanApplyFragment : Fragment() {
 
         userLoanApply.setOnClickListener{
             if(productOne.isChecked){
-                val amountTotal =  productPriceOne + productPriceTwo + productPriceThree + productPriceFour + productPriceFive
+                productPriceOne = 1000
+                productNameOne = "1 kg Fertilizer ,"
             }
 
-            val amountTotal = 299
+            if(productTwo.isChecked){
+                productPriceTwo = 1200
+                 productNameTwo = "1 kg Maize Seeds ,"
+            }
+
+            if(productThree.isChecked){
+                productPriceThree = 700
+                productNameThree = "1 kg Beans Seeds ,"
+            }
+
+            if(productFour.isChecked){
+                productPriceFour = 300
+                productNameFour = "Pesticide 5g ,"
+            }
+
+            if(productFive.isChecked){
+                productPriceFive = 100
+                productNameFive = "1 kg wheat seeds ,"
+            }
+            val product = "$productNameOne  $productNameTwo $productNameThree $productNameFour $productNameFive"
+
+            val amountTotal =  productPriceOne + productPriceTwo + productPriceThree + productPriceFour + productPriceFive
+
             val amount = amountTotal
 
             val scaleOfFarmingSelected : String = scaleOfFarming.getSelectedItem().toString()

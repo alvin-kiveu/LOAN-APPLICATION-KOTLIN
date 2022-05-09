@@ -34,7 +34,7 @@
         <item>Bank</item>
     </string-array>
 
-    <string-array name="periodOfFarming">
+    <string-array  name="periodOfFarming">
         <item>Choose Period Of Farming</item>
         <item>1 Month</item>
         <item>2 Month</item>

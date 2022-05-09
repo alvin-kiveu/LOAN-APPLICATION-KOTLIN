@@ -58,8 +58,8 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="360dp"
-        android:layout_height="37dp"
+        android:layout_width="356dp"
+        android:layout_height="33dp"
         android:background="@drawable/button"
         android:text="AMINIA FARM LOAN APPLICATION"
         android:textAlignment="center"

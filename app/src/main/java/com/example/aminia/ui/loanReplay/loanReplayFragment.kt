@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
+import androidx.core.app.NotificationCompat
 import androidx.fragment.app.Fragment
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
@@ -69,6 +70,7 @@ class loanReplayFragment : Fragment(){
                                 builder.setMessage(errorMessage)
                                 builder.setPositiveButton("Try Again") { dialogInterface: DialogInterface, i: Int -> }
                                 builder.show()
+
                             }
                         }
                     },
