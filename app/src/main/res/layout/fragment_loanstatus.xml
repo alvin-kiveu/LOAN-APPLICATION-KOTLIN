@@ -57,8 +57,8 @@
 
     <View
         android:id="@+id/loanDataInfo"
-        android:layout_width="355dp"
-        android:layout_height="769dp"
+        android:layout_width="353dp"
+        android:layout_height="792dp"
         android:background="@drawable/profileback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -238,10 +238,10 @@
         app:layout_constraintVertical_bias="0.689" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/intRest"
         android:layout_width="271dp"
         android:layout_height="24dp"
-        android:text="Repaid "
+        android:text="Amount With Intrest"
         android:textAlignment="center"
         android:textColor="#000E6A"
         android:textSize="16sp"
@@ -253,6 +253,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.788" />
 
+
+    <TextView
+        android:id="@+id/textIntRest"
+        android:layout_width="271dp"
+        android:layout_height="24dp"
+        android:textAlignment="center"
+        android:textColor="#2B5323"
+        android:textSize="16sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.833" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="271dp"
+        android:layout_height="24dp"
+        android:text="Repaid "
+        android:textAlignment="center"
+        android:textColor="#000E6A"
+        android:textSize="16sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.864" />
+
     <TextView
         android:id="@+id/textView14"
         android:layout_width="271dp"
@@ -263,10 +295,10 @@
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.856" />
+        app:layout_constraintVertical_bias="0.903" />
 
     <TextView
         android:id="@+id/textView18"
@@ -294,10 +326,10 @@
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.906" />
+        app:layout_constraintVertical_bias="0.938" />
 
     <TextView
         android:id="@+id/textView16"
@@ -311,7 +343,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.968" />
+        app:layout_constraintVertical_bias="0.979" />
 
     <TextView
         android:id="@+id/textView19"

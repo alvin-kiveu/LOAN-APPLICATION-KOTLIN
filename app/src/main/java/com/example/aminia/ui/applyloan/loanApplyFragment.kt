@@ -14,6 +14,7 @@ import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.example.aminia.R
+import com.google.android.material.textfield.TextInputEditText
 import org.json.JSONObject
 
 
@@ -24,7 +25,7 @@ class loanApplyFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val builder = context?.let { AlertDialog.Builder(it) }
         val root: View =  inflater.inflate(R.layout.fragment_loanapply, container, false)
         val userLoanApply = root.findViewById<TextView>(R.id.text_applyApply)
@@ -39,6 +40,15 @@ class loanApplyFragment : Fragment() {
         val productFour = root.findViewById<CheckBox>(R.id.P4)
         val productFive = root.findViewById<CheckBox>(R.id.P5)
 
+
+        val productQuantityOne = root.findViewById<TextInputEditText>(R.id.pq1)
+        val productQuantityTwo = root.findViewById<TextInputEditText>(R.id.pq2)
+        val productQuantityThree = root.findViewById<TextInputEditText>(R.id.pq3)
+        val productQuantityFour = root.findViewById<TextInputEditText>(R.id.pq4)
+        val productQuantityFive = root.findViewById<TextInputEditText>(R.id.pq5)
+
+
+
         var productPriceOne = 0
         var productPriceTwo = 0
         var productPriceThree = 0
@@ -51,7 +61,14 @@ class loanApplyFragment : Fragment() {
         var productNameFour = ""
         var productNameFive = ""
 
-
+        productFour.setOnClickListener{
+            if (builder != null) {
+                builder.setTitle("PRODUCT NOT AVAILABLE")
+                builder.setPositiveButton("Okay") { dialogInterface: DialogInterface, i: Int -> }
+                builder.show()
+                productFour.setChecked(false);
+            }
+        }
         val scaleOfFarming = root.findViewById<Spinner>(R.id.scaleOfFarming)
         ArrayAdapter.createFromResource(
             requireActivity(),
@@ -87,32 +104,37 @@ class loanApplyFragment : Fragment() {
 
         userLoanApply.setOnClickListener{
             if(productOne.isChecked){
-                productPriceOne = 1000
-                productNameOne = "1 kg Fertilizer ,"
+                val numOne  = Integer.parseInt(productQuantityOne.text.toString())
+                productPriceOne = 50 * numOne
+                productNameOne = "$numOne 1 kg Fertilizer ,"
             }
 
             if(productTwo.isChecked){
-                productPriceTwo = 1200
-                 productNameTwo = "1 kg Maize Seeds ,"
+                val numTwo = Integer.parseInt(productQuantityTwo.text.toString())
+                productPriceTwo = 180 * numTwo
+                 productNameTwo = "$numTwo 1 kg Maize Seeds ,"
             }
 
             if(productThree.isChecked){
-                productPriceThree = 700
-                productNameThree = "1 kg Beans Seeds ,"
+                val numThree = Integer.parseInt(productQuantityThree.text.toString())
+                productPriceThree = 78 * numThree
+                productNameThree = "$numThree 1 kg Beans Seeds ,"
             }
 
             if(productFour.isChecked){
-                productPriceFour = 300
-                productNameFour = "Pesticide 5g ,"
+                val numFour = Integer.parseInt(productQuantityFour.text.toString())
+                productPriceFour = 150 * numFour
+                productNameFour = "$numFour Pesticide 5g ,"
             }
 
             if(productFive.isChecked){
-                productPriceFive = 100
-                productNameFive = "1 kg wheat seeds ,"
+                val numFive = Integer.parseInt(productQuantityFive.text.toString())
+                productPriceFive = 130 * numFive
+                productNameFive = "$numFive 1 kg wheat seeds ,"
             }
             val product = "$productNameOne  $productNameTwo $productNameThree $productNameFour $productNameFive"
 
-            val amountTotal =  productPriceOne + productPriceTwo + productPriceThree + productPriceFour + productPriceFive
+            val amountTotal = productPriceOne  + productPriceTwo + productPriceThree + productPriceFour + productPriceFive
 
             val amount = amountTotal
 
@@ -161,9 +183,18 @@ class loanApplyFragment : Fragment() {
                         if (resultCode.toString() == "Success") {
                             typeOfFarming.setText("")
                             actionTaken.setText("")
+                            productQuantityOne.setText("")
+                            productQuantityTwo.setText("")
+                            productQuantityThree.setText("")
+                            productQuantityFour.setText("")
+                            productQuantityFive.setText("")
+                            productOne.setChecked(false);
+                            productTwo.setChecked(false);
+                            productThree.setChecked(false);
+                            productFive.setChecked(false);
                             if (builder != null) {
-                                builder.setTitle("LOAN APPLICATION")
-                                builder.setMessage("SUCCESSFULLY APPLIED")
+                                builder.setTitle("LOAN APPLICATION SUCCESS")
+                                builder.setMessage("Loan application is successfully applied, cash return will contain  3% interest")
                                 builder.setPositiveButton("Okay") { dialogInterface: DialogInterface, i: Int -> }
                                 builder.show()
                             }
@@ -200,5 +231,13 @@ class loanApplyFragment : Fragment() {
 
 
 }
+
+
+
+
+
+
+
+
 
 

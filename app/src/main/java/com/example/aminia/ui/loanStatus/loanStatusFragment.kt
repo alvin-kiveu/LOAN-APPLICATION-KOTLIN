@@ -44,6 +44,7 @@ class loanStatusFragment : Fragment(){
         val textView15 = root.findViewById<TextView>(R.id.textView15)
         val textView16 = root.findViewById<TextView>(R.id.textView16)
         val textView19 = root.findViewById<TextView>(R.id.textView19)
+        val textIntRest = root.findViewById<TextView>(R.id.textIntRest)
 
         val sharedPreferences: SharedPreferences? =
             this.getActivity()?.getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
@@ -67,6 +68,7 @@ class loanStatusFragment : Fragment(){
                     val product = stringResponse.getString("product")
                     val amount = stringResponse.getString("amount")
                     val paymentMethod = stringResponse.getString("paymentMethod")
+                    val amountWithIntRest = stringResponse.getString("amountWithIntRest")
                     val repaid = stringResponse.getString("repaid")
                    val remainBalance = stringResponse.getString("remainBalance")
                     textView5.setText(typeOfFarming).toString()
@@ -75,6 +77,7 @@ class loanStatusFragment : Fragment(){
                    textView10.setText(product).toString()
                     textView19.setText(amount).toString()
                     textView18.setText(paymentMethod).toString()
+                    textIntRest.setText(amountWithIntRest).toString()
                     textView14.setText(repaid).toString()
                     textView16.setText(remainBalance).toString()
                 }else{

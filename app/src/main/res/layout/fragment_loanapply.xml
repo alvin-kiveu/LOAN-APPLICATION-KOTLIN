@@ -14,6 +14,7 @@
         tools:context=".registration">
 
 
+
         <TextView
             android:id="@+id/top"
             android:layout_width="match_parent"
@@ -29,6 +30,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
+
 
         <EditText
             android:id="@+id/typeOfFarming"
@@ -80,7 +82,6 @@
             app:layout_constraintVertical_bias="0.207"
             tools:ignore="MissingConstraints,UnknownId" />
 
-
         <Spinner
             android:id="@+id/scaleOfFarming"
             android:layout_width="334dp"
@@ -101,80 +102,152 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/P1"
+            app:layout_constraintTop_toBottomOf="@+id/periodOfFarming"
             app:layout_constraintVertical_bias="1.0"
             tools:ignore="MissingConstraints,UnknownId" />
 
+
         <CheckBox
             android:id="@+id/P1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1 kg Fertilizer"
+            android:layout_width="334dp"
+            android:layout_height="60dp"
+            android:text="1 kg Fertilizer @ Ksh 50"
             android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/pq1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scaleOfFarming"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints,UnknownId" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pq1"
+            android:layout_width="334dp"
+            android:layout_height="60dp"
+            android:hint="Quantity"
+            android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/P2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.163"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/P2"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/P1"
+            app:layout_constraintVertical_bias="0.4"
             tools:ignore="MissingConstraints,UnknownId" />
 
         <CheckBox
             android:id="@+id/P2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1 kg Maize Seeds"
+            android:layout_width="334dp"
+            android:layout_height="60dp"
+            android:text="1 kg Maize Seeds @ Ksh 180"
             android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/pq2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pq1"
+            app:layout_constraintVertical_bias="0.91"
+            tools:ignore="MissingConstraints,UnknownId" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pq2"
+            android:layout_width="334dp"
+            android:layout_height="60dp"
+            android:hint="Quantity"
+            android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/P3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/P3"
-            app:layout_constraintVertical_bias="0.812"
+            app:layout_constraintTop_toBottomOf="@+id/P2"
+            app:layout_constraintVertical_bias="0.733"
             tools:ignore="MissingConstraints,UnknownId" />
 
         <CheckBox
             android:id="@+id/P3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1 kg Beans Seeds"
+            android:layout_width="334dp"
+            android:layout_height="60dp"
+            android:text="1 kg Beans Seeds @ Ksh 78"
             android:textColor="#000000"
-            app:layout_constraintBottom_toTopOf="@+id/P4"
+            app:layout_constraintBottom_toTopOf="@+id/pq3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/P4"
-            app:layout_constraintVertical_bias="0.812"
+            app:layout_constraintTop_toBottomOf="@+id/pq2"
+            app:layout_constraintVertical_bias="0.916"
             tools:ignore="MissingConstraints,UnknownId" />
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pq3"
+            android:layout_width="334dp"
+            android:layout_height="60dp"
+            android:hint="Quantity"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/P4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/P3"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints,UnknownId" />
 
         <CheckBox
             android:id="@+id/P4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pesticide 5g"
+            android:layout_width="334dp"
+            android:layout_height="60dp"
+            android:text="Pesticide 5g @ Ksh 150 [Not Available]"
             android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/pq4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pq3"
+            app:layout_constraintVertical_bias="0.95"
+            tools:ignore="MissingConstraints,UnknownId" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pq4"
+            android:layout_width="334dp"
+            android:layout_height="60dp"
+            android:hint="Quantity"
+            android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/P5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.158"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/P5"
-            app:layout_constraintVertical_bias="0.947"
+            app:layout_constraintTop_toBottomOf="@+id/P4"
+            app:layout_constraintVertical_bias="1.0"
             tools:ignore="MissingConstraints,UnknownId" />
 
         <CheckBox
             android:id="@+id/P5"
-            android:layout_width="164dp"
-            android:layout_height="38dp"
-            android:text="1 kg wheat seeds "
+            android:layout_width="334dp"
+            android:layout_height="60dp"
+            android:text="1 kg wheat seeds @ Ksh 130"
+            android:inputType="number"
             android:textColor="#000000"
-            app:layout_constraintBottom_toTopOf="@+id/paymentMethod"
+            app:layout_constraintBottom_toTopOf="@+id/pq5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.194"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/paymentMethod"
+            app:layout_constraintTop_toBottomOf="@+id/pq4"
             app:layout_constraintVertical_bias="1.0"
             tools:ignore="MissingConstraints,UnknownId" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pq5"
+            android:layout_width="334dp"
+            android:layout_height="60dp"
+            android:hint="Quantity"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/paymentMethod"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/P5"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints,UnknownId" />
+
 
         <Spinner
             android:id="@+id/paymentMethod"
@@ -198,11 +271,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/actionTaken"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/pq5"
+            app:layout_constraintVertical_bias="0.157"
             tools:ignore="MissingConstraints,UnknownId" />
-
-
 
         <EditText
             android:id="@+id/actionTaken"
@@ -225,39 +296,24 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_applyApply"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@id/paymentMethod"
+            app:layout_constraintVertical_bias="0.552"
             tools:ignore="MissingConstraints,NotSibling,UnknownId" />
-
 
         <Button
             android:id="@+id/text_applyApply"
             android:layout_width="334dp"
             android:layout_height="61dp"
-            android:layout_marginBottom="4dp"
             android:background="@drawable/button"
             android:text="Apply Loan"
             android:textSize="21sp"
-            app:layout_constraintBottom_toTopOf="@+id/loginText"
+            app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/loginText"
-            android:layout_width="240dp"
-            android:layout_height="84dp"
-            android:layout_marginBottom="4dp"
-            android:background="@drawable/rippo"
-            android:padding="20dp"
-            android:textColor="#000000"
-            android:textSize="21sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent" />
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/actionTaken"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints,NotSibling,UnknownId" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
